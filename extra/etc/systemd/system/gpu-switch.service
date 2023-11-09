@@ -1,0 +1,10 @@
+[Unit]
+Description=GPU Power Switching
+After=multi-user.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/gpu-switch
+
+[Install]
+WantedBy=multi-user.target

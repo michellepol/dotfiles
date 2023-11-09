@@ -1,0 +1,38 @@
+{
+    "diagnostic.checkCurrentLine": true,
+    "coc.preferences.useQuickfixForLocations": true,
+    "coc.preferences.formatOnSaveFiletypes": ["cpp"],
+    // python
+    "basedpyright.enable": true,
+    "basedpyright.analysis.typeCheckingMode": "standard",
+    // using basedpyright for diagnostic
+    "python.analysis.diagnosticEnabled": false,
+    "python.linting.ruffEnabled": true,
+    //  C++
+    "clangd.arguments": [
+        "--background-index",
+        "--header-insertion=never",
+        "--clang-tidy",
+        "-j=8"
+    ],
+    "Lua.diagnostics.globals": [
+        "vim"
+    ],
+    "Lua.workspace.library": [
+        "/usr/share/nvim/runtime/lua",
+        "/usr/share/nvim/runtime/lua/vim/lsp"
+    ],
+    "languageserver": {
+        "golang": {
+          "command": "/Users/michellepol/.ya/tools/v4/gopls-darwin/gopls",
+          "args": ["serve"],
+          "rootPatterns": ["go.mod"],
+          "filetypes": ["go"],
+          "settings": {
+            "gopls": {
+              "arcadiaIndexDirs": ["~/arcadia/taxi/backend-go/eats/services/eats-benefits", "library/go"]
+            }
+          }
+        }
+    },
+}

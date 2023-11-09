@@ -1,0 +1,9 @@
+alias ssh-dev="ssh h2a98bf1067654bdb9c48e220f5e3.sas.yp-c.yandex.net"
+
+export PATH="/Users/michellepol/arcadia:$PATH"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/michellepol/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+#
+[[ -s "/usr/local/share/goto.sh" ]] && source /usr/local/share/goto.sh

@@ -1,0 +1,9 @@
+source ${ZSH_CUSTOM}/themes/powerlevel10k-prompt-arc/arc.zsh
+
+export PATH=$PATH:"$(ya tool go --print-toolchain-path)/bin"
+
+alias gopls="$(ya tool gopls --print-toolchain-path)/gopls"
+alias tt="ya tool tt"
+alias vspy="ya ide vscode --py3 . -P ~/vscode/python/${PWD##*/}"
+alias vscpp="ya ide vscode --cpp . -P ~/vscode/cpp/${PWD##*/}"
+
