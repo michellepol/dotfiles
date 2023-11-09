@@ -12,9 +12,6 @@ local opt = vim.opt
 
 -- Main Settings --
 
--- Компактный вид у тагбара и Отк. сортировка по имени у тагбара
-g.tagbar_compact = 1
-g.tagbar_sort = 0
 g.python3_host_prog="/usr/bin/python3"
 opt.splitright = true               -- vertical split вправо
 opt.splitbelow = true               -- horizontal split вниз
@@ -63,15 +60,11 @@ vim.diagnostic.config({
   severity_sort = true,
 })
 
-
--- Theme --
-
 -- 24-bit RGB colors
 vim.opt.termguicolors = true
 -- brigthness of colorscheme space-vim-dark
 g.space_vim_dark_background = 234
 cmd 'colorscheme space-vim-dark'
-
 
 -- Plugins --
 

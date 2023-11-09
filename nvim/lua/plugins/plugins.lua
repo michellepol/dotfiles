@@ -17,6 +17,9 @@ return require('packer').startup(function()
     	config = function() require "plugins.configs.coc" end
     }
 
+    -- debugging
+    use {'mfussenegger/nvim-dap'}
+
     -- status line
     use { 'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true},
@@ -35,9 +38,6 @@ return require('packer').startup(function()
     requires = { {'nvim-lua/plenary.nvim'} },
     config = function() require'telescope'.setup {} end, }
     use 'google/vim-searchindex'
-
-    -- openapi
-    use 'hsanson/vim-openapi'
 
     -- git support
     use {
