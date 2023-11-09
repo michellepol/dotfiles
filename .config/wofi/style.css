@@ -1,0 +1,43 @@
+@define-color text-color #ffffff;
+@define-color background #000000;
+@define-color hover #555555;
+
+window {
+    margin: 0px;
+    border: 1px solid #7A8478;
+    background-color: @background;
+}
+
+#input {
+    margin: 5px;
+    border: none;
+    color: @text-color;
+    background-color: @background;
+}
+
+#inner-box {
+    margin: 5px;
+    border: none;
+    background-color: @background;
+}
+
+#outer-box {
+    margin: 5px;
+    border: none;
+    background-color: @background;
+}
+
+#scroll {
+    margin: 0px;
+    border: none;
+}
+
+#text {
+    margin: 5px;
+    border: none;
+    color: @text-color;
+}
+
+#entry:selected {
+    background-color: @hover;
+}

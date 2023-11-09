@@ -1,0 +1,28 @@
+{
+    "diagnostic.checkCurrentLine": true,
+    "coc.preferences.useQuickfixForLocations": true,
+    "coc.preferences.formatOnSave": true,
+    // python
+    "basedpyright.enable": true,
+    "basedpyright.analysis.typeCheckingMode": "standard",
+    // using basedpyright for diagnostic
+    "python.analysis.diagnosticEnabled": false,
+    "python.linting.pep8Enabled": true,
+    "python.linting.pep8Args": [
+        "--ignore=E501,E0401,E701"
+    ],
+    //  C++
+    "clangd.arguments": [
+        "--background-index",
+        "--header-insertion=never",
+        "--clang-tidy",
+        "-j=8"
+    ],
+    "Lua.diagnostics.globals": [
+        "vim"
+    ],
+    "Lua.workspace.library": [
+        "/usr/share/nvim/runtime/lua",
+        "/usr/share/nvim/runtime/lua/vim/lsp"
+    ]
+}
