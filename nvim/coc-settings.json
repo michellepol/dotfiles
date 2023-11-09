@@ -1,12 +1,15 @@
 {
-    "clangd": {
-        "arguments": ["--background-index", "--header-insertion=never", "--clang-tidy", "-j=8", "--log=error"]
-    },
+    "clangd.arguments": [
+        "--background-index",
+        "--header-insertion=never",
+        "--clang-tidy",
+        "-j=8"
+    ],
     "diagnostic.checkCurrentLine": true,
     "coc.preferences.useQuickfixForLocations": true,
-    "coc.preferences.snippets.enable": true,
+    "coc.preferences.formatOnSave": true,
     "python.linting.pylintEnabled": true,
-    "python.linting.pyflakesEnabled": true,
+    "python.linting.flake8Enabled": true,
     "python.linting.pylintArgs": [
         "--disable=C0103"
     ]

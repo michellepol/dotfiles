@@ -1,4 +1,4 @@
--- Variables --
+-- Local variables --
 
 -- execute Vim commands
 local cmd = vim.cmd
@@ -9,29 +9,35 @@ local g = vim.g
 -- global/buffer/windows-scoped options
 local opt = vim.opt
 
+-- Global variables --
+
+-- python binary for neovim python3 integration
+g.python3_host_prog = "/usr/bin/python3"
 
 -- Main Settings --
 
--- Компактный вид у тагбара и Отк. сортировка по имени у тагбара
-g.tagbar_compact = 1
-g.tagbar_sort = 0
-g.python3_host_prog="/usr/bin/python3"
-opt.splitright = true               -- vertical split вправо
-opt.splitbelow = true               -- horizontal split вниз
--- Cursor in middle of screen
-opt.so=999
+-- ??? --
+opt.splitright = true
+opt.splitbelow = true
+
+-- cursor in middle of screen, scrolls begin after reaching middle of a screen
+opt.scrolloff = 999
+
+-- title of terminal tab from vim
 opt.title = true
 
--- highlight cursor row
+-- highlight
+-- cursor row
 opt.cursorline = true
+-- column 80
+opt.colorcolumn = "80"
+
 -- rows numeration
 opt.number = true
 -- relative rows numberation
 opt.relativenumber = true
 -- possobility to undo file
 opt.undofile = true
--- highlight column 80
-opt.colorcolumn="80"
 -- use spaces instead of tabs
 opt.expandtab = true
 -- shift 4 spaces when tab
@@ -44,27 +50,13 @@ opt.smartindent = true
 -- space is leader button
 g.mapleader = " "
 
-cmd([[
-filetype indent plugin on
-syntax enable
-]])
-
--- Запоминает где nvim последний раз редактировал файл
-cmd [[
-autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-autocmd BufWritePre * :%s/\s\+$//e
-]]
-
 vim.diagnostic.config({
-  virtual_text = true,
-  signs = false,
-  underline = true,
-  update_in_insert = false,
-  severity_sort = true,
+    virtual_text = true,
+    signs = false,
+    underline = true,
+    update_in_insert = false,
+    severity_sort = true,
 })
-
-
--- Theme --
 
 -- 24-bit RGB colors
 vim.opt.termguicolors = true
@@ -72,10 +64,27 @@ vim.opt.termguicolors = true
 g.space_vim_dark_background = 234
 cmd 'colorscheme space-vim-dark'
 
-
 -- Plugins --
 
--- Need to for nerd tree because of concurrent state
+-- need to for nerd tree because of concurrent state
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- highlight copied text
+exec([[
+augroup YankHighlight
+autocmd!
+autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
+augroup end
+]], false)
+
+-- Save last edit line
+cmd[[
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+autocmd BufWritePre * :%s/\s\+$//e
+]]
+
+cmd([[
+filetype indent plugin on
+syntax enable
+]])
