@@ -17,9 +17,6 @@ return require('packer').startup(function()
     	config = function() require "plugins.configs.coc" end
     }
 
-    -- debugging
-    use {'mfussenegger/nvim-dap'}
-
     -- status line
     use { 'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true},
@@ -40,9 +37,8 @@ return require('packer').startup(function()
     use 'google/vim-searchindex'
 
     -- git support
-    use {
-        'lewis6991/gitsigns.nvim'
-    }
+    use 'lewis6991/gitsigns.nvim'
+    use '~/arcadia/junk/a-matveev9/gitsigns.arc.nvim'
 
     -- start page
     use 'mhinz/vim-startify'
