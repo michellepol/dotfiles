@@ -29,6 +29,7 @@ return require('packer').startup(function()
     	requires = {'kyazdani42/nvim-web-devicons',},
     	config = function() require "plugins.configs.bufferline" end,
     }
+    use 'moll/vim-bbye'
 
     -- code search
     use { 'nvim-telescope/telescope.nvim',

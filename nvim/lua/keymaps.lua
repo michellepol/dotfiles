@@ -18,6 +18,7 @@ map('n', '<C-Space>', '<PageUp> zz', default_opts)
 -- ### Switching tabs
 map('n', '<Tab>', ':BufferLineCycleNext<CR>', default_opts)
 map('n', '<S-Tab>', ':BufferLineCyclePrev<CR>', default_opts)
+map('n', '<C-Tab>', ':Bdelete<CR>', default_opts)
 
 -- ## Telescope
 map('n', '<leader>ff', [[ <cmd>lua require('telescope.builtin').find_files()<cr> ]], default_opts)
