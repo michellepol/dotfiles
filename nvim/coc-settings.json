@@ -5,10 +5,9 @@
         "--clang-tidy",
         "-j=8"
     ],
-    "clangd.path": "~/dev/clangd/bin/clangd",
+    "clangd.path": "/usr/bin/clangd",
     "diagnostic.checkCurrentLine": true,
     "coc.preferences.useQuickfixForLocations": true,
-    "coc.preferences.snippets.enable": true,
     "coc.preferences.formatOnSave": true,
     "python.linting.pylintEnabled": true,
     "python.linting.flake8Enabled": true,
