@@ -1,5 +1,4 @@
 require('plugins.plugins')
-
 require('settings')
 require('keymaps')
 
