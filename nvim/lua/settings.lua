@@ -12,20 +12,16 @@ local opt = vim.opt
 -- Global variables --
 
 -- Python binary for neovim python3 integration
-g.python3_host_prog="/usr/bin/python3"
+g.python3_host_prog = "/usr/bin/python3"
 
 -- Main Settings --
 
 -- ??? --
 opt.splitright = true
 opt.splitbelow = true
-cmd([[
-filetype indent plugin on
-syntax enable
-]])
 
 -- Cursor in middle of screen, scrolls begin after reaching middle of a screen
-opt.scrolloff=999
+opt.scrolloff = 999
 
 -- Title of terminal tab from vim
 opt.title = true
@@ -34,7 +30,7 @@ opt.title = true
 -- cursor row
 opt.cursorline = true
 -- column 80
-opt.colorcolumn="80"
+opt.colorcolumn = "80"
 
 -- rows numeration
 opt.number = true
@@ -54,18 +50,12 @@ opt.smartindent = true
 -- space is leader button
 g.mapleader = " "
 
--- save last edit line
-cmd [[
-autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
-autocmd BufWritePre * :%s/\s\+$//e
-]]
-
 vim.diagnostic.config({
-  virtual_text = true,
-  signs = false,
-  underline = true,
-  update_in_insert = false,
-  severity_sort = true,
+    virtual_text = true,
+    signs = false,
+    underline = true,
+    update_in_insert = false,
+    severity_sort = true,
 })
 
 -- 24-bit RGB colors
@@ -79,3 +69,21 @@ cmd 'colorscheme space-vim-dark'
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- Подсвечивает на доли секунды скопированную часть текста
+exec([[
+augroup YankHighlight
+autocmd!
+autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
+augroup end
+]], false)
+
+-- save last edit line
+cmd [[
+autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+autocmd BufWritePre * :%s/\s\+$//e
+]]
+
+cmd([[
+filetype indent plugin on
+syntax enable
+]])
