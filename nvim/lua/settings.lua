@@ -1,4 +1,4 @@
--- Variables --
+-- Local variables --
 
 -- execute Vim commands
 local cmd = vim.cmd
@@ -9,26 +9,39 @@ local g = vim.g
 -- global/buffer/windows-scoped options
 local opt = vim.opt
 
+-- Global variables --
+
+-- Python binary for neovim python3 integration
+g.python3_host_prog="/usr/bin/python3"
 
 -- Main Settings --
 
-g.python3_host_prog="/usr/bin/python3"
-opt.splitright = true               -- vertical split вправо
-opt.splitbelow = true               -- horizontal split вниз
--- Cursor in middle of screen
-opt.so=999
+-- ??? --
+opt.splitright = true
+opt.splitbelow = true
+cmd([[
+filetype indent plugin on
+syntax enable
+]])
+
+-- Cursor in middle of screen, scrolls begin after reaching middle of a screen
+opt.scrolloff=999
+
+-- Title of terminal tab from vim
 opt.title = true
 
--- highlight cursor row
+-- highlight
+-- cursor row
 opt.cursorline = true
+-- column 80
+opt.colorcolumn="80"
+
 -- rows numeration
 opt.number = true
 -- relative rows numberation
 opt.relativenumber = true
 -- possobility to undo file
 opt.undofile = true
--- highlight column 80
-opt.colorcolumn="80"
 -- use spaces instead of tabs
 opt.expandtab = true
 -- shift 4 spaces when tab
@@ -41,12 +54,7 @@ opt.smartindent = true
 -- space is leader button
 g.mapleader = " "
 
-cmd([[
-filetype indent plugin on
-syntax enable
-]])
-
--- Запоминает где nvim последний раз редактировал файл
+-- save last edit line
 cmd [[
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 autocmd BufWritePre * :%s/\s\+$//e
@@ -62,8 +70,7 @@ vim.diagnostic.config({
 
 -- 24-bit RGB colors
 vim.opt.termguicolors = true
--- brigthness of colorscheme space-vim-dark
-g.space_vim_dark_background = 234
+-- brigthness of colorscheme space-vim-dark g.space_vim_dark_background = 234
 cmd 'colorscheme space-vim-dark'
 
 -- Plugins --

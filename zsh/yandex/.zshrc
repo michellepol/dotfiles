@@ -7,23 +7,18 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-#source ~/.oh-my-zsh/custom/plugins/zsh-async/async.zsh
-
-fpath+=~/.zfunc
-
-plugins=(
-  bundler
-  dotenv
-  macos
-  rake
-  rbenv
-  ruby
-)
-
 export ZSH="$HOME/.oh-my-zsh"
 source $ZSH/oh-my-zsh.sh
 
-source ~/Dev/repos/powerlevel10k/powerlevel10k.zsh-theme
+source ${ZSH_CUSTOM}/plugins/zsh-async/async.zsh
+fpath+=~/.zfunc
+
+source ${ZSH_CUSTOM}/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# -- ALIAS -- #
+alias ssh-dev='ssh michelle-dev.sas.yp-c.yandex.net'
+alias arc-cd='cd ~/arcadia/taxi/uservices'
+alias ya='~/arcadia/ya'

@@ -8,7 +8,7 @@ return require('packer').startup(function()
 
     -- file tree
     use { 'nvim-tree/nvim-tree.lua',
-        requires = {'nvim-tree/nvim-web-devicons',},
+        requires = {'nvim-tree/nvim-web-devicons'},
         config = function() require "plugins.configs.nvimtree" end,
     }
 
@@ -19,14 +19,14 @@ return require('packer').startup(function()
 
     -- status line
     use { 'nvim-lualine/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true},
+    requires = {'nvim-tree/nvim-web-devicons'},
     config = function()
         require('lualine').setup()
     end, }
 
     -- buffers
     use {'akinsho/bufferline.nvim',
-    	requires = {'kyazdani42/nvim-web-devicons',},
+        requires = {'nvim-tree/nvim-web-devicons'},
     	config = function() require "plugins.configs.bufferline" end,
     }
     use 'moll/vim-bbye'
@@ -39,7 +39,7 @@ return require('packer').startup(function()
 
     -- git support
     use 'lewis6991/gitsigns.nvim'
-    use '~/arcadia/junk/a-matveev9/gitsigns.arc.nvim'
+    --use '~/arcadia/junk/a-matveev9/gitsigns.arc.nvim'
 
     -- start page
     use 'mhinz/vim-startify'
