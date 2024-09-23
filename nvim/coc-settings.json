@@ -3,14 +3,20 @@
         "--background-index",
         "--header-insertion=never",
         "--clang-tidy",
-        "-j=8"
+        "-j=6"
+    ],
+    "clangd.path": "~/Dev/bin/clangd16/bin/clangd",
+    "clangd.enabled": true,
+    "clangd.compilationDatabaseCandidates": [
+        "/Users/michellepol/Library/Caches/uservices-ya-dump"
     ],
     "diagnostic.checkCurrentLine": true,
     "coc.preferences.useQuickfixForLocations": true,
     "coc.preferences.formatOnSave": true,
     "python.linting.pylintEnabled": true,
-    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Enabled": false,
     "python.linting.pylintArgs": [
-        "--disable=C0103"
+        "--disable=C0103",
+        "--disable=E0401"
     ]
 }
