@@ -24,14 +24,18 @@ source $ZSH/oh-my-zsh.sh
 # Source p10k theme
 source ${ZSH_CUSTOM}/themes/powerlevel10k-prompt-arc/arc.zsh
 
+tttest() {
+    ~/arcadia/ya tool tt test $@ --yt-proxy=localhost:8000
+}
+
 # Aliases
 alias ya='~/arcadia/ya'
 alias arc-cd="cd ~/arcadia/taxi/uservices"
-alias tt="ya tool tt --yt-proxy=localhost:8000"
-alias tt-test="ya tool tt test --yt-proxy=localhost:8000"
+alias tt="ya tool tt"
 alias ssh-dev="ssh -o StrictHostKeyChecking=no michelle-dev.sas.yp-c.yandex.net"
 alias clangd18="~/Dev/bin/clangd18/bin/clangd"
 alias python="/usr/bin/python3"
+alias joern-scan="/Users/michellepol/Dev/bin/joern/joern-cli/joern-scan"
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/michellepol/.rd/bin:$PATH"
