@@ -3,13 +3,9 @@
         "--background-index",
         "--header-insertion=never",
         "--clang-tidy",
-        "-j=6"
+        "-j=8"
     ],
-    "clangd.path": "~/Dev/bin/clangd16/bin/clangd",
     "clangd.enabled": true,
-    "clangd.compilationDatabaseCandidates": [
-        "/Users/michellepol/Library/Caches/uservices-ya-dump"
-    ],
     "diagnostic.checkCurrentLine": true,
     "coc.preferences.useQuickfixForLocations": true,
     "coc.preferences.formatOnSave": true,
