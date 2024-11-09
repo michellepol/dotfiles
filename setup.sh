@@ -18,6 +18,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 # make symbolic links to repo
+#
+#TODO: Add links to ~/.zshrc and ~/.p10k
 files=$(ls $PWD)
 
 for file in $files;
