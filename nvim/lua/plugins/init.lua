@@ -39,12 +39,10 @@ return require('packer').startup(function()
 
     -- git support
     use 'lewis6991/gitsigns.nvim'
-    --use '~/arcadia/junk/a-matveev9/gitsigns.arc.nvim'
 
     -- start page
     use 'mhinz/vim-startify'
 
     -- syntax highlight
     use 'nvim-treesitter/nvim-treesitter'
-    use 'neovim/nvim-lspconfig'
 end)

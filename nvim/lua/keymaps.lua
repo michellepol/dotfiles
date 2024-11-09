@@ -10,8 +10,6 @@ map('i', '<C-s>', ':w<CR>', default_opts)
 map('n', '<Space>', '<PageDown> zz', default_opts)
 map('n', '<C-Space>', '<PageUp> zz', default_opts)
 
--- # Plugins
-
 -- ## Telescope
 map('n', '<leader>ff', [[ <cmd>lua require('telescope.builtin').find_files()<cr> ]], default_opts)
 map('n', '<leader>fg', [[<cmd>lua require('telescope.builtin').live_grep()<cr>]], default_opts)
