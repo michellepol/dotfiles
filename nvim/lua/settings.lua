@@ -11,7 +11,7 @@ local opt = vim.opt
 
 -- Global variables --
 
--- Python binary for neovim python3 integration
+-- python binary for neovim python3 integration
 g.python3_host_prog = "/usr/bin/python3"
 
 -- Main Settings --
@@ -20,17 +20,17 @@ g.python3_host_prog = "/usr/bin/python3"
 opt.splitright = true
 opt.splitbelow = true
 
--- Cursor in middle of screen, scrolls begin after reaching middle of a screen
+-- cursor in middle of screen, scrolls begin after reaching middle of a screen
 opt.scrolloff = 999
 
--- Title of terminal tab from vim
+-- title of terminal tab from vim
 opt.title = true
 
 -- highlight
 -- cursor row
 opt.cursorline = true
 -- column 80
-opt.colorcolumn = "80"
+opt.colorcolumn = "120"
 
 -- rows numeration
 opt.number = true
@@ -60,16 +60,17 @@ vim.diagnostic.config({
 
 -- 24-bit RGB colors
 vim.opt.termguicolors = true
--- brigthness of colorscheme space-vim-dark g.space_vim_dark_background = 234
+-- brigthness of colorscheme space-vim-dark
+g.space_vim_dark_background = 234
 cmd 'colorscheme space-vim-dark'
 
 -- Plugins --
 
--- Need to for nerd tree because of concurrent state
+-- need to for nerd tree because of concurrent state
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
--- Подсвечивает на доли секунды скопированную часть текста
+-- highlight copied text
 exec([[
 augroup YankHighlight
 autocmd!
@@ -77,8 +78,8 @@ autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", ti
 augroup end
 ]], false)
 
--- save last edit line
-cmd [[
+-- Save last edit line
+cmds[[
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 autocmd BufWritePre * :%s/\s\+$//e
 ]]
