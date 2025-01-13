@@ -14,7 +14,7 @@ source ${ZSH_CUSTOM}/themes/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 alias ue=ue4
-alias byedpi="/usr/local/bin/ciadpi -s1 -q1 -Y -Ar -s5 -o1+s -At -f-1 -r1+s -As -s1 -o1 +s -s-1 -An -p 8088 -i 127.0.0.1"
+alias byedpi="ciadpi --debug -s1 -q1 -Y -Ar -s5 -o1+s -At -f-1 -r1+s -As -s1 -o1 +s -s-1 -An -p 8088 -i 127.0.0.1"
 
 export EDITOR="nvim"
 export PATH=$PATH:~/go/bin

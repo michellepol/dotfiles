@@ -13,7 +13,7 @@ require'nvim-treesitter.configs'.setup {
   -- parser_install_dir = "/some/path/to/store/parsers", -- Remember to run vim.opt.runtimepath:append("/some/path/to/store/parsers")!
 
   highlight = {
-    enable = true,
+    enable = false,
 
     -- disable slow treesitter highlight for large files
     disable = function(lang, buf)

@@ -30,7 +30,7 @@ opt.title = true
 -- cursor row
 opt.cursorline = true
 -- column 80
-opt.colorcolumn = "120"
+opt.colorcolumn = "80"
 
 -- rows numeration
 opt.number = true
@@ -79,7 +79,7 @@ augroup end
 ]], false)
 
 -- Save last edit line
-cmds[[
+cmd[[
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 autocmd BufWritePre * :%s/\s\+$//e
 ]]

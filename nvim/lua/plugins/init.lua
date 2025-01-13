@@ -44,5 +44,7 @@ return require('packer').startup(function()
     use 'mhinz/vim-startify'
 
     -- syntax highlight
-    use 'nvim-treesitter/nvim-treesitter'
+    use { 'nvim-treesitter/nvim-treesitter',
+        config = function() require "plugins.configs.treesitter" end,
+    }
 end)
