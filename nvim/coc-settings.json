@@ -5,12 +5,14 @@
         "--clang-tidy",
         "-j=8"
     ],
+    "clangd.enabled": true,
     "diagnostic.checkCurrentLine": true,
     "coc.preferences.useQuickfixForLocations": true,
     "coc.preferences.formatOnSave": true,
     "python.linting.pylintEnabled": true,
-    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Enabled": false,
     "python.linting.pylintArgs": [
-        "--disable=C0103"
+        "--disable=C0103",
+        "--disable=E0401"
     ]
 }

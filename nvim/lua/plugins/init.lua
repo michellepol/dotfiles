@@ -38,7 +38,7 @@ return require('packer').startup(function()
     use 'google/vim-searchindex'
 
     -- git support
-    use 'lewis6991/gitsigns.nvim'
+    use '~/arcadia/junk/a-matveev9/gitsigns.arc.nvim'
 
     -- start page
     use 'mhinz/vim-startify'
