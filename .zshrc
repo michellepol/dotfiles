@@ -32,6 +32,5 @@ alias tt="ya tool tt"
 alias ssh-dev="ssh -o StrictHostKeyChecking=no michelle-dev.sas.yp-c.yandex.net"
 alias clangd18="~/Dev/bin/clangd18/bin/clangd"
 alias python="/usr/bin/python3"
-alias joern-scan="/Users/michellepol/Dev/bin/joern/joern-cli/joern-scan"
 
 export EDITOR="nvim"

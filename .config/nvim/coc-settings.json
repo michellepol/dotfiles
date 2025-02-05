@@ -8,9 +8,7 @@
     "diagnostic.checkCurrentLine": true,
     "coc.preferences.useQuickfixForLocations": true,
     "coc.preferences.formatOnSave": true,
-    "python.linting.pylintEnabled": true,
-    "python.linting.flake8Enabled": true,
-    "python.linting.pylintArgs": [
-        "--disable=C0103"
-    ]
+    "basedpyright.enable": true,
+    "basedpyright.analysis.typeCheckingMode": "all",
+    "python.venvPath": "~/Dev/venvs"
 }
