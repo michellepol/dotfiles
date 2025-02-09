@@ -2,9 +2,9 @@
 
 # install zsh
 
-echo "install zsh & change default shell"
+echo "install dependencies & change default shell to zsh"
 
-sudo pacman -S zsh
+sudo pacman -S zsh stow nodejs npm
 
 # change shell to zsh
 
@@ -18,6 +18,18 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 git clone https://github.com/mafredri/zsh-async.git ${ZSH_CUSTOM}/plugins/zsh-async
 
-sudo pacman -S stow
+echo "link config to ~/"
 
 stow -R -v -t ~ .
+
+# neovim
+
+# Install packer
+
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+# Install nodejs (for coc and gitsigns)
+sudo pacman -S 
+
+nvim -c 'PackerInstall'
