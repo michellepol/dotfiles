@@ -1,0 +1,103 @@
+@define-color text-color #ffffff;
+@define-color background #000000;
+@define-color selected-background #222222;
+@define-color hover #555555;
+
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: "Zpix";
+    font-weight: bold;
+}
+
+.modules-right {
+    background: @background;
+    padding-left: 16px;
+}
+
+window#waybar {
+    background: @background;
+    border-radius: 12px;
+    margin-top: 8px;
+}
+
+tooltip {
+    background: @background;
+    color: @text-color;
+    border-radius: 16px;
+    padding: 16px;
+}
+
+#workspaces {
+    padding-left: 16px;
+    padding-right: 16px;
+    background: @background;
+    border-radius: 0px 24px 24px 0px;
+}
+
+#workspaces button {
+    font-size: 20px;
+    box-shadow: none;
+    text-shadow: none;
+    padding: 0px;
+    min-width: 32px;
+    color: @text-color;
+    transition: all 0.2s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+    opacity: 0.9;
+}
+
+#workspaces button.active {
+    color: @selected-background;
+    transition: all 0.2s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+    opacity: 0.95;
+}
+
+#workspaces button:hover {
+    color: @hover;
+    transition: all 0.2s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+    opacity: 1;
+}
+
+#cpu,
+#battery,
+#memory,
+#clock,
+#window,
+#network,
+#bluetooth,
+#pulseaudio,
+#mpris,
+#custom-updates,
+#custom-wallchange,
+#custom-mode,
+#custom-cliphist,
+#custom-wbar,
+#custom-power,
+#tray {
+    font-size: 18px;
+    color: @text-color;
+    opacity: 0.9;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+#window,
+#taskbar {
+    padding: 0px;
+}
+
+#custom-random {
+    color: @text-color;
+    padding-right: 8px;
+}
+
+
+#image.spacebar {
+    background-image: url("/home/vdawg/.local/share/chezmoi/.other/hyprshaders/spacebar.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-width: 200px;
+    min-height: 36px;
+    margin-top: 4px;
+}
