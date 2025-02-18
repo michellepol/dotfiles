@@ -34,3 +34,7 @@ alias clangd18="~/Dev/bin/clangd18/bin/clangd"
 alias python="/usr/bin/python3"
 
 export EDITOR="nvim"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/michellepol/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
