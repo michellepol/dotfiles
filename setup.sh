@@ -1,18 +1,22 @@
 #!/bin/bash
 
 # install packages
-echo "install packages"
-sudo pacman -S kitty bitwarden waybar hyprland hyprpaper wofi
+echo "install required packages"
+sudo pacman -S kitty bitwarden waybar hyprland hyprpaper wofi stow nodejs npm zsh
+
+# make links to repo
+echo "link dotfiles to home directory"
+
+stow -R -v -t ~ .
+
+# neovim
+
+# Install packer
+
+git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+ ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 # install zsh
-
-echo "install dependencies & change default shell to zsh"
-
-sudo pacman -S zsh stow nodejs npm
-
-## change shell to zsh
-
-chsh -s /bin/zsh
 
 echo "install oh-my-zsh framework"
 
@@ -22,22 +26,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 git clone https://github.com/mafredri/zsh-async.git ${ZSH_CUSTOM}/plugins/zsh-async
 
-# make links to repo
-echo "link config to ~/"
+echo "change default shell to zsh"
 
-stow -R -v -t ~ .
+chsh -s /bin/zsh
 
-# fonts
-echo "install fonts"
-
-# neovim
-
-# Install packer
-
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-
-# Install nodejs (for coc and gitsigns)
-sudo pacman -S nodejs npm
-
-nvim -c 'PackerInstall'
+echo "Launch neovim with option PackerInstall for installing neovim plugins: nvim -c 'PackerInstall'"
