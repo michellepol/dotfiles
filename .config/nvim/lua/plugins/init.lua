@@ -3,18 +3,15 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
 
-    -- popular colorschemes
+    -- UI --
+
+    -- popular color schemes
     use 'rafi/awesome-vim-colorschemes'
 
     -- file tree
     use { 'nvim-tree/nvim-tree.lua',
         requires = { 'nvim-tree/nvim-web-devicons' },
         config = function() require "plugins.configs.nvimtree" end,
-    }
-
-    -- auto completion
-    use { 'neoclide/coc.nvim', branch = 'release',
-        config = function() require "plugins.configs.coc" end
     }
 
     -- status line
@@ -31,6 +28,16 @@ return require('packer').startup(function()
     }
     use 'moll/vim-bbye'
 
+    -- start page
+    use 'mhinz/vim-startify'
+
+    -- CODE --
+
+    -- auto completion
+    use { 'neoclide/coc.nvim', branch = 'release',
+        config = function() require "plugins.configs.coc" end
+    }
+
     -- code search
     use { 'nvim-telescope/telescope.nvim',
         requires = { { 'nvim-lua/plenary.nvim' } },
@@ -39,12 +46,18 @@ return require('packer').startup(function()
 
     -- git support
     use 'lewis6991/gitsigns.nvim'
-
-    -- start page
-    use 'mhinz/vim-startify'
+    use '~/arcadia/junk/a-matveev9/gitsigns.arc.nvim'
 
     -- syntax highlight
     use { 'nvim-treesitter/nvim-treesitter',
         config = function() require "plugins.configs.treesitter" end,
     }
+
+    -- comments
+    use { 'preservim/nerdcommenter',
+        config = function()
+            require('nerdcommenter').setup()
+        end,
+    }
+
 end)
