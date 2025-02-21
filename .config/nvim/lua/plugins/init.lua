@@ -54,10 +54,5 @@ return require('packer').startup(function()
     }
 
     -- comments
-    use { 'preservim/nerdcommenter',
-        config = function()
-            require('nerdcommenter').setup()
-        end,
-    }
-
+    use { 'preservim/nerdcommenter' }
 end)

@@ -10,5 +10,21 @@
     "coc.preferences.formatOnSave": true,
     "basedpyright.enable": true,
     "basedpyright.analysis.typeCheckingMode": "all",
-    "python.venvPath": "~/Dev/venvs"
+    "python.linting.enabled": true,
+    "python.linting.pylintPath": "/Library/Frameworks/Python.framework/Versions/3.7/bin/pylint",
+    "python.linting.pylintArgs": [
+        "--ignore=E501,E0401,E0301"
+    ],
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": "/Library/Frameworks/Python.framework/Versions/3.7/bin/flake8",
+    "python.linting.flake8Args": [
+        "--ignore=E501"
+    ],
+    "python.linting.pep8Enabled": true,
+    "python.linting.pep8Path": "/Library/Frameworks/Python.framework/Versions/3.7/bin/pep8",
+    "python.linting.pep8Args": [
+        "--ignore=E501,E0401,E701"
+    ],
+    "python.analysis.diagnosticEnabled": false,
+    "python.formatting.autopep8Path": "/Library/Frameworks/Python.framework/Versions/3.7/bin/autopep8"
 }
