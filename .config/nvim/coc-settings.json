@@ -9,7 +9,7 @@
     "coc.preferences.useQuickfixForLocations": true,
     "coc.preferences.formatOnSave": true,
     "basedpyright.enable": true,
-    "basedpyright.analysis.typeCheckingMode": "all",
+    "basedpyright.analysis.typeCheckingMode": "standard",
     "python.linting.enabled": true,
     "python.linting.pylintPath": "/Library/Frameworks/Python.framework/Versions/3.7/bin/pylint",
     "python.linting.pylintArgs": [
