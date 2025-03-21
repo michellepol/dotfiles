@@ -5,8 +5,14 @@ return require('packer').startup(function()
 
     -- UI --
 
-    -- popular color schemes
-    use 'rafi/awesome-vim-colorschemes'
+    use({
+    'MeanderingProgrammer/render-markdown.nvim',
+    after = { 'nvim-treesitter' },
+        requires = { 'echasnovski/mini.nvim', opt = true }, -- if you use the mini.nvim suite
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }, -- if you prefer nvim-web-devicons
+    config = function() require "plugins.configs.markdown" end,
+	})
+    use 'navarasu/onedark.nvim'
 
     -- file tree
     use { 'nvim-tree/nvim-tree.lua',

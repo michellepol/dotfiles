@@ -60,9 +60,11 @@ vim.diagnostic.config({
 
 -- 24-bit RGB colors
 vim.opt.termguicolors = true
--- brigthness of colorscheme space-vim-dark
-g.space_vim_dark_background = 234
-cmd 'colorscheme space-vim-dark'
+-- colorscheme
+require('onedark').setup {
+    style = 'darker'
+}
+require('onedark').load()
 
 -- Plugins --
 
