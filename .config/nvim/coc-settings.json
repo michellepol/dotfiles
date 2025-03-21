@@ -10,11 +10,6 @@
     "coc.preferences.formatOnSave": true,
     "basedpyright.enable": true,
     "basedpyright.analysis.typeCheckingMode": "standard",
-    "python.linting.enabled": true,
-    "python.linting.pylintPath": "/Library/Frameworks/Python.framework/Versions/3.7/bin/pylint",
-    "python.linting.pylintArgs": [
-        "--ignore=E501,E0401,E0301"
-    ],
     "python.linting.flake8Enabled": true,
     "python.linting.flake8Path": "/Library/Frameworks/Python.framework/Versions/3.7/bin/flake8",
     "python.linting.flake8Args": [

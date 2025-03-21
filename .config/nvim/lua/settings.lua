@@ -20,6 +20,8 @@ g.python3_host_prog = "/usr/bin/python3"
 opt.splitright = true
 opt.splitbelow = true
 
+--vim.api.nvim_set_keymap("russian-jcukenwin")
+
 -- cursor in middle of screen, scrolls begin after reaching middle of a screen
 opt.scrolloff = 999
 
@@ -51,11 +53,11 @@ opt.smartindent = true
 g.mapleader = " "
 
 vim.diagnostic.config({
-    virtual_text = true,
-    signs = false,
-    underline = true,
-    update_in_insert = false,
-    severity_sort = true,
+	virtual_text = true,
+	signs = false,
+	underline = true,
+	update_in_insert = false,
+	severity_sort = true,
 })
 
 -- 24-bit RGB colors
@@ -81,7 +83,7 @@ augroup end
 ]], false)
 
 -- Save last edit line
-cmd[[
+cmd [[
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 autocmd BufWritePre * :%s/\s\+$//e
 ]]
