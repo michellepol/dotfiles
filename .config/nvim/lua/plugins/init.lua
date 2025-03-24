@@ -4,15 +4,20 @@ return require('packer').startup(function()
     use 'wbthomason/packer.nvim'
 
     -- UI --
-
+    use 'nvim-tree/nvim-web-devicons'
+    -- use 'echasnovski/mini.nvim'
     use({
-    'MeanderingProgrammer/render-markdown.nvim',
-    after = { 'nvim-treesitter' },
-        requires = { 'echasnovski/mini.nvim', opt = true }, -- if you use the mini.nvim suite
-        requires = { 'nvim-tree/nvim-web-devicons', opt = true }, -- if you prefer nvim-web-devicons
-    config = function() require "plugins.configs.markdown" end,
-	})
-    use 'navarasu/onedark.nvim'
+        'MeanderingProgrammer/render-markdown.nvim',
+        after = { 'nvim-treesitter' },
+        -- requires = { 'echasnovski/mini.nvim', opt = true },
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true },
+        config = function() require "plugins.configs.markdown" end,
+    })
+    use({
+        'navarasu/onedark.nvim',
+        config = function() require "plugins.configs.onedark" end,
+    }
+    )
 
     -- file tree
     use { 'nvim-tree/nvim-tree.lua',
