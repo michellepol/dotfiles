@@ -63,9 +63,6 @@ vim.diagnostic.config({
 -- 24-bit RGB colors
 vim.opt.termguicolors = true
 -- colorscheme
-require('onedark').setup {
-    style = 'deep'
-}
 require('onedark').load()
 
 -- Plugins --

@@ -13,6 +13,7 @@ return require('packer').startup(function()
         requires = { 'nvim-tree/nvim-web-devicons', opt = true },
         config = function() require "plugins.configs.markdown" end,
     })
+
     use({
         'navarasu/onedark.nvim',
         config = function() require "plugins.configs.onedark" end,

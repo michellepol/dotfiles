@@ -1,10 +1,11 @@
 require('onedark').setup {
+    style = 'deep',
+    colors={
+    },
     highlights = {
         --["@string"] = {fg = '$bright_orange', bg = '#00ff00', fmt = 'bold'},
         --["@function"] = {fg = '#0000ff', sp = '$cyan', fmt = 'underline,italic'},
-        ["@string"] = { fg = '$green' },
-        ["@function"] = { fg = '$yellow' },
-        ["@variable"] = { fg = '$cyan' }
+        --["@function.method"] = {fg = '$blue' },
         --["@annotation"] = colors.Fg,
         --["@attribute"] = colors.Cyan,
         --["@attribute.typescript"] = colors.Blue,
@@ -24,7 +25,6 @@ require('onedark').setup {
         --["@diff.minus"] = hl.common.DiffDeleted,
         --["@diff.delta"] = hl.common.DiffChanged,
         --["@error"] = colors.Fg,
-        --["@function"] = {fg = c.blue, fmt = cfg.code_style.functions},
         --["@function.builtin"] = {fg = c.cyan, fmt = cfg.code_style.functions},
         --["@function.macro"] = {fg = c.cyan, fmt = cfg.code_style.functions},
         --["@function.method"] = {fg = c.blue, fmt = cfg.code_style.functions},
