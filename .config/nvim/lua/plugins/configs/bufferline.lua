@@ -4,7 +4,15 @@ require('bufferline').setup {
         diagnostics = "coc",
         diagnostics_update_in_insert = false,
         diagnostics_indicator = function(count, level, diagnostics_dict, context)
-            return "(" .. count .. ")"
+            local level_str = ""
+            if level == "warning" then
+                level_str = "W"
+            end
+            if level == "error" then
+                level_str = "E"
+            end
+
+            return string.format("(%s%s)", count, level_str)
         end,
         offsets = { { filetype = "NvimTree", text = "File Explorer", text_align = "left" } },
         color_icons = true,

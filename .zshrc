@@ -24,15 +24,21 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Source p10k theme
-source ${ZSH_CUSTOM}/themes/powerlevel10k/powerlevel10k.zsh-theme
+if [[ OWNER = "yandex" ]]
+then
+    source ${ZSH_CUSTOM}/themes/powerlevel10k-prompt-arc/arc.zsh
+else
+    source ${ZSH_CUSTOM}/themes/powerlevel10k/powerlevel10k.zsh-theme
+fi
 
-# Source arcadia p10k theme, must be after sourcing of p10k
-# source ${ZSH_CUSTOM}/themes/powerlevel10k-prompt-arc/arc.zsh
+if [[ OWNER = "yandex" ]]
+then
+    alias ya='~/arcadia/ya'
+    alias arc-cd="cd ~/arcadia/taxi/uservices"
+    alias tt="ya tool tt"
+    alias ssh-dev="ssh -o StrictHostKeyChecking=no michelle-dev.sas.yp-c.yandex.net"
+fi
 
-#alias ya='~/arcadia/ya'
-#alias arc-cd="cd ~/arcadia/taxi/uservices"
-#alias tt="ya tool tt"
-#alias ssh-dev="ssh -o StrictHostKeyChecking=no michelle-dev.sas.yp-c.yandex.net"
 alias ue=ue4
 alias byedpi="ciadpi --debug -s1 -q1 -Y -Ar -s5 -o1+s -At -f-1 -r1+s -As -s1 -o1 +s -s-1 -An -p 8088 -i 127.0.0.1"
 

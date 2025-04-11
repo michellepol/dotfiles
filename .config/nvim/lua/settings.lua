@@ -1,9 +1,5 @@
 -- Local variables --
 
--- execute Vim commands
-local cmd = vim.cmd
--- execute Vimscript
-local exec = vim.api.nvim_exec
 -- global variables
 local g = vim.g
 -- global/buffer/windows-scoped options
@@ -72,20 +68,20 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 -- highlight copied text
-exec([[
+vim.cmd([[
 augroup YankHighlight
 autocmd!
 autocmd TextYankPost * silent! lua vim.highlight.on_yank{higroup="IncSearch", timeout=700}
 augroup end
-]], false)
+]])
 
 -- Save last edit line
-cmd [[
+vim.cmd([[
 autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 autocmd BufWritePre * :%s/\s\+$//e
-]]
+]])
 
-cmd([[
+vim.cmd([[
 filetype indent plugin on
 syntax enable
 ]])
