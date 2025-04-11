@@ -31,3 +31,5 @@ echo "change default shell to zsh"
 chsh -s /bin/zsh
 
 echo "Launch neovim with option PackerInstall for installing neovim plugins: nvim -c 'PackerInstall'"
+
+git submodule update --init --recursive

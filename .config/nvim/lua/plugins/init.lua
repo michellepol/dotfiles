@@ -67,4 +67,8 @@ return require('packer').startup(function()
 
     -- comments
     use { 'preservim/nerdcommenter' }
+
+    -- ai (experimental)
+    use {'yetone/avante.nvim'}
+
 end)

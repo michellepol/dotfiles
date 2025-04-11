@@ -23,17 +23,23 @@ source $ZSH/oh-my-zsh.sh
 # Source p10k settings
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# Source arcadia p10k theme, must be after sourcing of p10k
-source ${ZSH_CUSTOM}/themes/powerlevel10k-prompt-arc/arc.zsh
+# Source p10k theme
+source ${ZSH_CUSTOM}/themes/powerlevel10k/powerlevel10k.zsh-theme
 
-alias ya='~/arcadia/ya'
-alias arc-cd="cd ~/arcadia/taxi/uservices"
-alias tt="ya tool tt"
-alias ssh-dev="ssh -o StrictHostKeyChecking=no michelle-dev.sas.yp-c.yandex.net"
-alias clangd18="~/Dev/bin/clangd18/bin/clangd"
-alias python="/usr/bin/python3"
+# Source arcadia p10k theme, must be after sourcing of p10k
+# source ${ZSH_CUSTOM}/themes/powerlevel10k-prompt-arc/arc.zsh
+
+#alias ya='~/arcadia/ya'
+#alias arc-cd="cd ~/arcadia/taxi/uservices"
+#alias tt="ya tool tt"
+#alias ssh-dev="ssh -o StrictHostKeyChecking=no michelle-dev.sas.yp-c.yandex.net"
+alias ue=ue4
+alias byedpi="ciadpi --debug -s1 -q1 -Y -Ar -s5 -o1+s -At -f-1 -r1+s -As -s1 -o1 +s -s-1 -An -p 8088 -i 127.0.0.1"
 
 export EDITOR="nvim"
+
+# activate unreal engine venv
+source ~/envs/ue/bin/activate
 
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/michellepol/.rd/bin:$PATH"
