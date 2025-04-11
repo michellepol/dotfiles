@@ -11,6 +11,7 @@ local opt = vim.opt
 g.python3_host_prog = "/usr/bin/python3"
 
 -- Main Settings --
+opt.foldmethod = "manual"
 
 -- ??? --
 opt.splitright = true

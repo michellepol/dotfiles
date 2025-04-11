@@ -1,6 +1,5 @@
-require('plugins')
-require('plugins.configs')
 require('settings')
 require('keymaps')
+require("config.lazy")
 
 require("nvim-tree").setup()
