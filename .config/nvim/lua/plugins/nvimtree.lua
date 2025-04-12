@@ -27,6 +27,7 @@ return {
             require("nvim-tree.api").tree.open()
         end
 
+        -- working, don't touch))
         require("nvim-tree").setup({})
 
         vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
