@@ -2,7 +2,7 @@ return {
     "neoclide/coc.nvim",
     version = "*",
     branch = "release",
-    event = "InsertEnter",
+    event = "BufEnter",
     config = function()
         -- Some servers have issues with backup files, see #649
         vim.opt.backup = false

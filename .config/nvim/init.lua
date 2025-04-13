@@ -34,5 +34,3 @@ require("config.keymaps")
 require("config.autocmds")
 require("config.options")
 
--- colorscheme
-require('onedark').load()
