@@ -3,12 +3,12 @@ local default_opts = { noremap = true, silent = true }
 
 -- General
 -- Save on Ctrl + S
-map('n', '<C-s>', ':w<CR>', default_opts)
-map('i', '<C-s>', ':w<CR>', default_opts)
+map('n', '<C-s>', ':w<CR>:Format<CR>', default_opts)
+map('i', '<C-s>', ':w<CR>:Format<CR>', default_opts)
 
 -- List code by pages (ctrl + f in classical vim)
-map('n', '<Space>', '<PageDown> zz', default_opts)
-map('n', '<C-Space>', '<PageUp> zz', default_opts)
+map('n', 'sd', '<PageDown> zz', default_opts)
+map('n', 'su', '<PageUp> zz', default_opts)
 
 -- Plugins
 

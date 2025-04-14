@@ -33,4 +33,4 @@ require("lazy").setup({
 require("config.keymaps")
 require("config.autocmds")
 require("config.options")
-
+require("config.vscode")

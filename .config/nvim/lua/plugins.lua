@@ -21,6 +21,5 @@ return {
     {"lewis6991/gitsigns.nvim", event = "VeryLazy"},
     --{ '~/arcadia/junk/a-matveev9/gitsigns.arc.nvim', event = "VeryLazy" },
 
-    -- commenting --
     {"preservim/nerdcommenter", event = "VeryLazy"}
 }

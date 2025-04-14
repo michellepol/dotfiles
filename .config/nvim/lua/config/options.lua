@@ -6,6 +6,8 @@ opt.foldmethod = "manual"
 -- ??? --
 opt.splitright = true
 opt.splitbelow = true
+-- views can only be fully collapsed with the global statusline
+opt.laststatus = 3
 
 --vim.api.nvim_set_keymap("russian-jcukenwin")
 
