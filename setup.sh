@@ -2,19 +2,28 @@
 
 # install packages
 echo "install required packages"
-sudo pacman -S kitty bitwarden waybar hyprland hyprpaper wofi stow nodejs npm zsh
+sudo pacman -S stow nodejs npm zsh
+
+#TODO: https://wiki.hyprland.org/Useful-Utilities/Must-have/
+echo "install hyprland"
+sudo pacman -S xdg-desktop-portal-hyprland wofi hyprland hyprpaper grim slurp qt5-wayland qt6-wayland
+
+yay -S hyprpanel
+
+echo "install apps "
+sudo pacman -S kitty bitwarden
+
+echo "install language servers packages"
+sudo pacman -S shellcheck bash-language-server clangd lua-language-server
+
+yay -S basedpyright
+
+pip install pylint
 
 # make links to repo
 echo "link dotfiles to home directory"
 
 stow -R -v -t ~ .
-
-# neovim
-
-# Install packer
-
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 # install zsh
 
@@ -29,7 +38,5 @@ git clone https://github.com/mafredri/zsh-async.git ${ZSH_CUSTOM}/plugins/zsh-as
 echo "change default shell to zsh"
 
 chsh -s /bin/zsh
-
-echo "Launch neovim with option PackerInstall for installing neovim plugins: nvim -c 'PackerInstall'"
 
 git submodule update --init --recursive

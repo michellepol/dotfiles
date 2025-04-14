@@ -3,12 +3,16 @@ local default_opts = { noremap = true, silent = true }
 
 -- General
 -- Save on Ctrl + S
-map('n', '<C-s>', ':w<CR>', default_opts)
-map('i', '<C-s>', ':w<CR>', default_opts)
+map('n', '<C-s>', ':w<CR>:Format<CR>', default_opts)
+map('i', '<C-s>', ':w<CR>:Format<CR>', default_opts)
 
 -- List code by pages (ctrl + f in classical vim)
-map('n', '<Space>', '<PageDown> zz', default_opts)
-map('n', '<C-Space>', '<PageUp> zz', default_opts)
+map('n', 'sd', '<PageDown> zz', default_opts)
+map('n', 'su', '<PageUp> zz', default_opts)
+
+-- Disable arrows and touchpad as well
+map("", "<Up>", "<Nop>", { noremap = false })
+map("", "<Down>", "<Nop>", { noremap = false })
 
 -- Plugins
 
@@ -117,18 +121,18 @@ keyset("o", "ac", "<Plug>(coc-classobj-a)", opts)
 -- Mappings for CoCList
 local opts = { silent = true, nowait = true }
 -- Show all diagnostics
-keyset("n", "<space>a", ":<C-u>CocList diagnostics<cr>", opts)
--- Manage extensions
-keyset("n", "<space>e", ":<C-u>CocList extensions<cr>", opts)
--- Show commands
-keyset("n", "<space>c", ":<C-u>CocList commands<cr>", opts)
--- Find symbol of current document
-keyset("n", "<space>o", ":<C-u>CocList outline<cr>", opts)
--- Search workspace symbols
-keyset("n", "<space>s", ":<C-u>CocList -I symbols<cr>", opts)
--- Do default action for next item
-keyset("n", "<space>j", ":<C-u>CocNext<cr>", opts)
--- Do default action for previous item
-keyset("n", "<space>k", ":<C-u>CocPrev<cr>", opts)
--- Resume latest coc list
-keyset("n", "<space>p", ":<C-u>CocListResume<cr>", opts)
+--keyset("n", "<space>a", ":<C-u>CocList diagnostics<cr>", opts)
+---- Manage extensions
+--keyset("n", "<space>e", ":<C-u>CocList extensions<cr>", opts)
+---- Show commands
+--keyset("n", "<space>c", ":<C-u>CocList commands<cr>", opts)
+---- Find symbol of current document
+--keyset("n", "<space>o", ":<C-u>CocList outline<cr>", opts)
+---- Search workspace symbols
+--keyset("n", "<space>s", ":<C-u>CocList -I symbols<cr>", opts)
+---- Do default action for next item
+--keyset("n", "<space>j", ":<C-u>CocNext<cr>", opts)
+---- Do default action for previous item
+--keyset("n", "<space>k", ":<C-u>CocPrev<cr>", opts)
+---- Resume latest coc list
+--keyset("n", "<space>p", ":<C-u>CocListResume<cr>", opts)

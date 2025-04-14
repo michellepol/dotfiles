@@ -1,16 +1,13 @@
 {
     "diagnostic.checkCurrentLine": true,
     "coc.preferences.useQuickfixForLocations": true,
-    "coc.preferences.formatOnSave": true,
+    "coc.preferences.formatOnSaveFiletypes": ["cpp"],
     // python
     "basedpyright.enable": true,
     "basedpyright.analysis.typeCheckingMode": "standard",
     // using basedpyright for diagnostic
     "python.analysis.diagnosticEnabled": false,
-    "python.linting.pep8Enabled": true,
-    "python.linting.pep8Args": [
-        "--ignore=E501,E0401,E701"
-    ],
+    "python.linting.pylintEnabled": true,
     //  C++
     "clangd.arguments": [
         "--background-index",

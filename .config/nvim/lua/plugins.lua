@@ -6,9 +6,6 @@ return {
     -- buffers --
     {"moll/vim-bbye", cmd = "Bdelete"},
 
-    -- start page
-    {"mhinz/vim-startify", event = "VimEnter"},
-
     -- code search --
     {
         "nvim-telescope/telescope.nvim",
@@ -21,6 +18,5 @@ return {
     {"lewis6991/gitsigns.nvim", event = "VeryLazy"},
     --{ '~/arcadia/junk/a-matveev9/gitsigns.arc.nvim', event = "VeryLazy" },
 
-    -- commenting --
     {"preservim/nerdcommenter", event = "VeryLazy"}
 }

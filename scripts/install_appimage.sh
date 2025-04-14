@@ -29,7 +29,7 @@ Version=1.0
 Type=Application
 Name=$APP_NAME
 Exec="$INSTALL_DIR/$APPIMAGE_NAME" %U
-Icon=application-default-icon
+Icon=~/.local/share/icons/$APPIMAGE_NAME
 Terminal=false
 Categories=Utility;
 EOL
