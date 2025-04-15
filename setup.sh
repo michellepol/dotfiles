@@ -2,7 +2,16 @@
 
 # install packages
 echo "install required packages"
-sudo pacman -S kitty bitwarden waybar hyprland hyprpaper wofi stow nodejs npm zsh
+sudo pacman -S stow nodejs npm zsh
+
+#TODO: https://wiki.hyprland.org/Useful-Utilities/Must-have/
+echo "install required hyprland"
+sudo pacman -S xdg-desktop-portal-hyprland waybar wofi hyprland hyprpaper grim slurp qt5-wayland qt6-wayland
+
+yay -S wlogout
+
+echo "install apps "
+sudo pacman -S kitty bitwarden
 
 # make links to repo
 echo "link dotfiles to home directory"
