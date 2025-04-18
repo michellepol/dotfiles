@@ -9,7 +9,6 @@ return {
     -- refer to the configuration section below
     bigfile = { enabled = true },
     dashboard = { enabled = true },
-    explorer = { enabled = true },
     indent = { enabled = true },
     input = { enabled = true },
     picker = { enabled = true },
@@ -19,6 +18,8 @@ return {
     scroll = { enabled = true },
     statuscolumn = { enabled = true },
     words = { enabled = true },
+    animate = { enabled = true },
+    explorer = { enabled = false},
   },
 }
 

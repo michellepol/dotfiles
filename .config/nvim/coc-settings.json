@@ -9,8 +9,7 @@
     "python.analysis.diagnosticEnabled": false,
     "python.linting.pep8Enabled": true,
     "python.linting.pep8Args": [
-        "--ignore=E501,E0401,E701"
-    ],
+        "--ignore=E501,E0401,E701" ],
     //  C++
     "clangd.arguments": [
         "--background-index",

@@ -6,9 +6,6 @@ return {
     -- buffers --
     {"moll/vim-bbye", cmd = "Bdelete"},
 
-    -- start page
-    {"mhinz/vim-startify", event = "VimEnter"},
-
     -- code search --
     {
         "nvim-telescope/telescope.nvim",

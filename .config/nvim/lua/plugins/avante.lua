@@ -8,8 +8,9 @@ return {
         vendors = {
             ["deepseek-ai"] = {
                  __inherited_from = 'openai',
-                endpoint = "http://deepseek-openai.yandex-team.ru/deepseek-v3/v1",
-                model = "deepseek-0324",
+                endpoint="https://api.deepseek.com/v1",
+                --endpoint = "http://deepseek-openai.yandex-team.ru/deepseek-v3/v1",
+                model = "deepseek-coder",
                 timeout = 30000,    -- Timeout in milliseconds, increase this for reasoning models
                 temperature = 0,
                 max_completion_tokens = 8192, -- Increase this to include reasoning tokens (for reasoning models)
