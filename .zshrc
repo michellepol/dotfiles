@@ -31,7 +31,8 @@ else
     source ${ZSH_CUSTOM}/themes/powerlevel10k/powerlevel10k.zsh-theme
 fi
 
-alias ya='~/arcadia/ya'
+export PATH="/Users/michellepol/arcadia:$PATH"
+export PATH=$PATH:/usr/local/go/bin
 alias arc-cd="cd ~/arcadia/taxi/uservices"
 alias tt="ya tool tt"
 alias ssh-dev="ssh -o StrictHostKeyChecking=no michelle-dev.sas.yp-c.yandex.net"

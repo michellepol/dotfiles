@@ -30,6 +30,8 @@ require("lazy").setup({
 }
 )
 
+require('git-conflict').setup()
+
 require("config.keymaps")
 require("config.autocmds")
 require("config.options")

@@ -7,9 +7,13 @@
     "basedpyright.analysis.typeCheckingMode": "standard",
     // using basedpyright for diagnostic
     "python.analysis.diagnosticEnabled": false,
+<<<<<<< Updated upstream
     "python.linting.pep8Enabled": true,
     "python.linting.pep8Args": [
         "--ignore=E501,E0401,E701" ],
+=======
+    "python.linting.pylintEnabled": true,
+>>>>>>> Stashed changes
     //  C++
     "clangd.arguments": [
         "--background-index",
