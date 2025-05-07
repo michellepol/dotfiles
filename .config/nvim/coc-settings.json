@@ -21,5 +21,13 @@
     "Lua.workspace.library": [
         "/usr/share/nvim/runtime/lua",
         "/usr/share/nvim/runtime/lua/vim/lsp"
-    ]
+    ],
+    "languageserver": {
+        "go": {
+            "command": "~/.ya/tools/v4/8460578744/gopls",
+            "filetypes": [
+                "go"
+            ]
+        }
+    }
 }
