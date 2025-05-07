@@ -23,11 +23,16 @@
         "/usr/share/nvim/runtime/lua/vim/lsp"
     ],
     "languageserver": {
-        "go": {
-            "command": "~/.ya/tools/v4/8460578744/gopls",
-            "filetypes": [
-                "go"
-            ]
+        "golang": {
+          "command": "~/.ya/tools/v4/gopls-linux/gopls",
+          "args": ["serve"],
+          "rootPatterns": ["go.mod"],
+          "filetypes": ["go"],
+          "settings": {
+            "gopls": {
+              "arcadiaIndexDirs": ["~/arcadia/taxi/backend-go/eats/services/eats-benefits", "library/go"]
+            }
+          }
         }
-    }
+}
 }
