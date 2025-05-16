@@ -16,7 +16,13 @@ return {
 
     -- git support --
     {"lewis6991/gitsigns.nvim", event = "VeryLazy"},
-    --{ '~/arcadia/junk/a-matveev9/gitsigns.arc.nvim', event = "VeryLazy" },
+    {dir='~/arcadia/junk/a-matveev9/gitsigns.arc.nvim', event = "VeryLazy" },
+
+    {
+        "m4xshen/hardtime.nvim",
+        dependencies = { "MunifTanjim/nui.nvim",
+        event="VeryLazy"},
+    },
 
     {"preservim/nerdcommenter", event = "VeryLazy"}
 }
