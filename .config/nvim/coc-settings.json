@@ -8,6 +8,9 @@
     // using basedpyright for diagnostic
     "python.analysis.diagnosticEnabled": false,
     "python.linting.pylintEnabled": true,
+    "python.linting.pylintPath": "/Library/Frameworks/Python.framework/Versions/3.7/bin/pylint",
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": "/Library/Frameworks/Python.framework/Versions/3.7/bin/flake8",
     //  C++
     "clangd.arguments": [
         "--background-index",
@@ -24,7 +27,7 @@
     ],
     "languageserver": {
         "golang": {
-          "command": "~/.ya/tools/v4/gopls-linux/gopls",
+          "command": "/Users/michellepol/.ya/tools/v4/gopls-darwin/gopls",
           "args": ["serve"],
           "rootPatterns": ["go.mod"],
           "filetypes": ["go"],

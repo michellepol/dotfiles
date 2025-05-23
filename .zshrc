@@ -32,7 +32,8 @@ else
 fi
 
 export PATH="/Users/michellepol/arcadia:$PATH"
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:"$(ya tool go --print-toolchain-path)/bin"
+alias gopls="$(ya tool gopls --print-toolchain-path)/gopls"
 alias arc-cd="cd ~/arcadia/taxi/uservices"
 alias tt="ya tool tt"
 alias ssh-dev="ssh -o StrictHostKeyChecking=no michelle-dev.sas.yp-c.yandex.net"
@@ -47,3 +48,7 @@ source ~/envs/ue/bin/activate
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/michellepol/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+
+
+alias vspy="ya ide vscode --py3 . -P ~/vscode/python/${PWD##*/}"
+alias vscpp="ya ide vscode --cpp . -P ~/vscode/cpp/${PWD##*/}"
