@@ -1,8 +1,8 @@
 return {
     "neoclide/coc.nvim",
-    version = false,
     event = "BufEnter",
     cond = vim.g.vscode == false or vim.g.vscode == nil,
+    build='npm ci',
     config = function()
         -- Some servers have issues with backup files, see #649
         vim.opt.backup = false
