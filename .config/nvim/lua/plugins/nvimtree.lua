@@ -1,6 +1,6 @@
 return {
     "nvim-tree/nvim-tree.lua",
-    version = "*",
+    version = false,
     dependencies = { "nvim-tree/nvim-web-devicons" },
     config = function()
         local function open_nvim_tree(data)

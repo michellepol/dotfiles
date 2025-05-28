@@ -35,3 +35,5 @@ require('git-conflict').setup()
 require("config.keymaps")
 require("config.autocmds")
 require("config.options")
+
+runtimepath="~/dev/repos/coc-agent"

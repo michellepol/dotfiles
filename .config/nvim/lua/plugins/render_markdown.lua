@@ -1,6 +1,6 @@
 return {
     "MeanderingProgrammer/render-markdown.nvim",
-    version = "*",
+    version = false,
     opts = {
             heading = {
                 enabled = false,

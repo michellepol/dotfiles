@@ -1,7 +1,6 @@
 return {
     "neoclide/coc.nvim",
-    version = "*",
-    branch = "release",
+    version = false,
     event = "BufEnter",
     cond = vim.g.vscode == false or vim.g.vscode == nil,
     config = function()
