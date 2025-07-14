@@ -27,7 +27,7 @@
     ],
     "languageserver": {
         "golang": {
-          "command": "/Users/michellepol/.ya/tools/v4/gopls-darwin/gopls",
+          "command": "/codenv/.ya/tools/v4/gopls-linux/gopls",
           "args": ["serve"],
           "rootPatterns": ["go.mod"],
           "filetypes": ["go"],
