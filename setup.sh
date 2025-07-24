@@ -9,4 +9,3 @@ echo "link dotfiles to home directory"
 stow -R -v -t ~ .
 
 git submodule update --init --recursive
-
