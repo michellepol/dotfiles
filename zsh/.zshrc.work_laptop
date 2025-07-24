@@ -1,3 +1,5 @@
+alias ssh-dev="ssh hbe2d9e10e403433d94c055355a50.sas.yp-c.yandex.net"
+
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/Users/michellepol/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
