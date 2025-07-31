@@ -2,27 +2,21 @@ return {
     "yetone/avante.nvim",
     version = false,
     opts = {
-        provider = "claude",
-        auto_suggestions_provider = "claude",
-        cursor_applying_provider = "claude",
-        claude = {
-            endpoint = "https://api.anthropic.com",
-            model = "claude-sonnet-4-20250514",
-            timeout = 30000,
-            temperature = 0,
-            max_tokens = 4096,
-            disable_tools = true
-        },
-        vendors = {
-            ["deepseek-ai"] = {
+        provider = "deepseek",
+        providers = {
+            claude = {
+                endpoint = "https://api.anthropic.com",
+                model = "claude-sonnet-4-20250514",
+                timeout = 30000,
+            },
+            deepseek = {
                 __inherited_from = 'openai',
                 endpoint = "https://api.deepseek.com/v1",
                 model = "deepseek-coder",
                 timeout = 30000,
-                temperature = 0,
-                max_completion_tokens = 8192,
+                disable_tools = true,
                 api_key_name = "DEEPSEEK_API_KEY",
-            },
+            }
         },
         behaviour = {
             auto_suggestions = false,
