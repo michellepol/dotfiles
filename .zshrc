@@ -1,5 +1,5 @@
-export DOTFILES_DIR=/home/michellepol/dev/repos/dotfiles
+export DOTFILES_DIR=~/Dev/repos/dotfiles
 
 source $DOTFILES_DIR/zsh/.zshrc.common
 source $DOTFILES_DIR/zsh/.zshrc.work
-source $DOTFILES_DIR/zsh/.zshrc.vm
+source $DOTFILES_DIR/zsh/.zshrc.work_laptop
