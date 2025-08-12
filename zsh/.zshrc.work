@@ -1,6 +1,5 @@
 source ${ZSH_CUSTOM}/themes/powerlevel10k-prompt-arc/arc.zsh
 
-export PATH="/home/michellepol/arcadia:$PATH"
 export PATH=$PATH:"$(ya tool go --print-toolchain-path)/bin"
 
 alias gopls="$(ya tool gopls --print-toolchain-path)/gopls"
