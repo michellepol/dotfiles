@@ -2,7 +2,7 @@ return {
     "yetone/avante.nvim",
     version = false,
     opts = {
-        provider = "deepseek",
+        provider = "eliza",
         providers = {
             claude = {
                 endpoint = "https://api.anthropic.com",
@@ -16,6 +16,14 @@ return {
                 timeout = 30000,
                 disable_tools = true,
                 api_key_name = "DEEPSEEK_API_KEY",
+            },
+            eliza = {
+                __inherited_from = 'openai',
+                endpoint = "https://api.eliza.yandex.net/anthropic/v1",
+                model = "claude-sonnet-4-20250514",
+                timeout = 30000,
+                disable_tools = true,
+                api_key_name = "ELIZA_API_KEY",
             }
         },
         behaviour = {

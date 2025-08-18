@@ -27,6 +27,4 @@ return {
     },
 
     {"preservim/nerdcommenter", event = "VeryLazy"},
-
-    {"michellepol/coc-agent", event="VeryLazy"}
 }
