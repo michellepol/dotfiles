@@ -22,7 +22,6 @@ return {
                 endpoint = "https://api.eliza.yandex.net/anthropic/v1",
                 model = "claude-sonnet-4-20250514",
                 timeout = 30000,
-                disable_tools = true,
                 api_key_name = "ELIZA_API_KEY",
             }
         },
@@ -31,7 +30,7 @@ return {
             auto_set_highlight_group = true,
             auto_set_keymaps = true,
             auto_apply_diff_after_generation = false,
-            support_paste_from_clipboard = false,
+            support_paste_from_clipboard = true,
             minimize_diff = true,
             enable_token_counting = true,
             enable_cursor_planning_mode = true,

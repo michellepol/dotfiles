@@ -33,9 +33,6 @@ return {
             desc = "Update signature help on jump placeholder"
         })
 
-        -- Add `:Format` command to format current buffer
-        vim.api.nvim_create_user_command("Format", "call CocAction('format')", {})
-
         -- Add `:Fold` command to fold current buffer
         vim.api.nvim_create_user_command("Fold", "call CocAction('fold', <f-args>)", { nargs = '?' })
 
