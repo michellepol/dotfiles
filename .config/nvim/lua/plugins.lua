@@ -16,6 +16,7 @@ return {
 
     -- git support --
     {"lewis6991/gitsigns.nvim", event = "VeryLazy"},
+    {'akinsho/git-conflict.nvim', version = "*", config = true},
     --{dir='~/arcadia/junk/a-matveev9/gitsigns.arc.nvim', event = "VeryLazy" },
 
     {'segoon/yaml-navigation.nvim', event = "VeryLazy"},

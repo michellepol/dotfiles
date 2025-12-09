@@ -5,13 +5,7 @@ return {
             lua = { "stylua" },
             go = { "goimports", "gofmt" },
             python= { "ruff_fix", "ruff_format"},
-            cpp= {"clang-format"},
         },
-        formatters = {
-            clang_format = {
-              prepend_args = { '--style=file', '--fallback-style=Google' },
-            },
-        }
     },
     config = function ()
         vim.api.nvim_create_user_command("Format", function(args)
