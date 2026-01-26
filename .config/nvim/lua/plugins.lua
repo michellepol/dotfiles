@@ -27,4 +27,6 @@ return {
     },
 
     {"preservim/nerdcommenter", event = "VeryLazy"},
+
+    {"tomasiser/vim-code-dark", event = "VeryLazy"},
 }

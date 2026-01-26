@@ -35,3 +35,5 @@ require("config.autocmds")
 require("config.options")
 
 runtimepath="~/dev/repos/coc-agent"
+
+vim.cmd.colorscheme "codedark"
